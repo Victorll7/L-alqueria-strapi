@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frutas",
+  "info": {
+    "singularName": "fruta",
+    "pluralName": "frutas",
+    "displayName": "Frutas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "discount": {
+      "type": "integer",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "wallpaper": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "unidad": {
+      "type": "enumeration",
+      "enum": [
+        "Kg",
+        "Bandeja",
+        "Unidad"
+      ],
+      "required": true,
+      "default": "Kg"
+    },
+    "Temporada": {
+      "type": "enumeration",
+      "enum": [
+        "Sí",
+        "No "
+      ]
+    }
+  }
+}
