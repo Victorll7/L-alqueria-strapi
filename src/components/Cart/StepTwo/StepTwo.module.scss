@@ -1,0 +1,29 @@
+.stepTwo {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.center {
+  width: 65%;
+  padding-right: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+    padding-right: 0; /* Quitamos el padding derecho en móvil */
+    margin-bottom: 20px; /* Espacio inferior entre secciones */
+  }
+}
+
+.right {
+  width: 35%;
+  padding-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+    padding-left: 0; /* Quitamos el padding izquierdo en móvil */
+  }
+}

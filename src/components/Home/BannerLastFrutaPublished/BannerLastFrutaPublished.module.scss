@@ -1,0 +1,67 @@
+@import "~/src/scss/index.scss";
+
+.container {
+  position: relative;
+  height: 450px;
+  margin-top: 15vh;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0vh;
+    height: 800px; /* Mayor altura para pantallas grandes */
+  }
+}
+
+.wallpaper {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 10%;
+    width: 80%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+.infoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    height: 95%;
+    margin-top: -20vh;
+  }
+
+  h2 {
+    margin: 5px 0 20px 0 !important;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    color: $text-secondary;
+  }
+
+  .finalPrice {
+    margin-left: 75px;
+    font-size: 28px;
+    color: $text-primary;
+  }
+
+  .finalPriceNoDiscount {
+    margin-left: 0;
+    font-size: 30px;
+    color: $text-primary;
+  }
+}

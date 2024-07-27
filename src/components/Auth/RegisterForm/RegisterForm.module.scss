@@ -1,0 +1,67 @@
+@import "~/src/scss/index.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  button {
+    background-color: $primary;
+    transition: background-color 0.3s ease;
+    color: white;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-wrap: wrap; /* Para permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.inputWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+.inputWrapper:last-child {
+  margin-right: 0;
+}
+
+/* Estilos para los campos de entrada */
+.inputWrapper input {
+  border: 2px solid #333; /* Borde oscuro */
+  border-radius: 8px; /* Borde redondeado */
+  padding: 10px;
+  font-size: 14px;
+  width: 100%; /* Ajusta el ancho para que ocupe todo el espacio disponible */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Estilos para el botón */
+.submitButton {
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Borde redondeado */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  width: 100%; /* Ajusta el ancho para que ocupe todo el espacio disponible */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

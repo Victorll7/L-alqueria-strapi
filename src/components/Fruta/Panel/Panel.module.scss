@@ -1,0 +1,153 @@
+@import "~/src/scss/index.scss";
+
+.panel {
+  position: relative;
+  display: flex !important;
+  // margin-top: -150px;
+}
+
+.imgContainer {
+  width: 50%;
+  margin-top: -70px;
+
+  > img {
+    border-radius: 15px;
+  }
+}
+
+.actionsContainer {
+  width: 50%;
+  padding-right: 22px;
+  height: 100%;
+
+  > div {
+    background-color: $background-quaternary__blur;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.moreInfo {
+  background-color: $background-quaternary__blur;
+  backdrop-filter: blur(15px);
+  display: flex;
+  padding: 6px 15px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+
+  > span {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $border-primary;
+    padding-right: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+
+    &:first-of-type {
+      > img {
+        filter: brightness(0) invert(1);
+        height: 18px;
+        margin-right: 10px;
+      }
+    }
+
+    &:last-of-type {
+      border-right: 0;
+      padding-right: 0;
+      margin-right: 0;
+
+      i {
+        display: flex;
+        align-items: center;
+        color: $success;
+        margin-right: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.price {
+  margin-bottom: 40px;
+
+  .originalPrice {
+    font-size: 18px;
+    text-decoration: line-through;
+
+    > i {
+      font-size: 12px;
+    }
+  }
+
+  .discount {
+    margin: 0 10px;
+    color: $primary;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .finalPrice {
+    font-size: 30px;
+  }
+}
+
+.heart {
+  margin: 0 !important;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .panel {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20vh; /* Añade padding top para compensar el margen negativo en móvil */
+  }
+
+  .imgContainer {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    > img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
+
+  .actionsContainer {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .moreInfo {
+    margin-bottom: 20px;
+  }
+
+  .price {
+    .originalPrice {
+      font-size: 16px;
+    }
+
+    .discount {
+      font-size: 16px;
+    }
+
+    .price {
+      font-size: 20px;
+    }
+  }
+}

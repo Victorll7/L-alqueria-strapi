@@ -1,0 +1,26 @@
+@import "~/src/scss/index.scss";
+
+.payment > h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.block {
+  background-color: $background-quaternary__blur;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Añade espacio entre cada campo
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}

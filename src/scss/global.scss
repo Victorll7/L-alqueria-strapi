@@ -1,0 +1,36 @@
+@import "./index.scss";
+@import "./semantic-ui/index.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
+
+/* Otros estilos globales */
+
+* {
+  color: $text-primary;
+}
+
+body {
+  margin: 0;
+  background-color: $background-primary;
+  font-family: "DM Serif Text", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $text-secondary;
+
+  &:hover {
+    color: $primary;
+  }
+}

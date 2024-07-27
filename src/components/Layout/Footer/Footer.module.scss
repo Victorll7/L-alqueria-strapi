@@ -1,0 +1,113 @@
+@import "~/src/scss/index.scss";
+
+.footer {
+  background-color: $background-tertiary;
+  padding: 30px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column; /* Cambiamos a columna en móvil */
+  }
+
+  > div {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(3) {
+      @media screen and (max-width: 768px) {
+        margin-top: 20px; /* Añadimos margen top en móvil */
+      }
+    }
+
+    > a > img {
+      width: 150px;
+    }
+
+    > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @media screen and (max-width: 768px) {
+        padding-left: 50vw;
+        margin-top: -10vh;
+        display: inline-flex;
+      }
+
+      > a {
+        color: $text-secondary;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    &.contact {
+      @media screen and (max-width: 768px) {
+        // padding-left: 25vw;
+      }
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center; /* Alineamos el texto al centro */
+
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $text-secondary;
+          font-size: 16px;
+          text-decoration: none;
+
+          &:hover {
+            color: $primary;
+          }
+
+          > i {
+            margin-right: 10px;
+            color: $text-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  color: $text-secondary;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid $border-secondary;
+
+  > span {
+    color: $text-secondary;
+  }
+}

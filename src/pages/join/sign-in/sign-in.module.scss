@@ -1,0 +1,25 @@
+@import "~/src/scss/index.scss";
+
+.signIn {
+  width: 50%;
+
+  > h3 {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    margin-top: 10px;
+
+    > a {
+      color: $text-primary;
+
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

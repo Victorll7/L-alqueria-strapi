@@ -1,0 +1,48 @@
+.topBar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; /* Reducir el padding para dispositivos móviles */
+  z-index: 5;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+}
+.left {
+  width: 25%; /* Ocupa todo el ancho en dispositivos móviles */
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle; /* Alinea verticalmente con Account */
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 45%; /* Vuelve a 20% en pantallas más grandes si es necesario */
+  }
+}
+
+.center {
+  width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+
+  @media screen and (min-width: 768px) {
+    width: 60%; /* O ajusta según sea necesario para pantallas más grandes */
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center; /* Alinear verticalmente con Image */
+  justify-content: flex-end;
+  width: auto; /* Ancho automático en pantallas más grandes */
+
+  @media screen and (max-width: 767px) {
+    width: 50%; /* Ocupa la mitad del ancho en dispositivos móviles */
+    justify-content: flex-start; /* Alinear Account a la izquierda en móvil */
+    margin-left: 10px; /* Ajustar margen izquierdo para separación */
+  }
+}

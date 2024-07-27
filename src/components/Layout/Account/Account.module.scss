@@ -1,0 +1,151 @@
+@import "~/src/scss/index.scss";
+
+.account {
+  display: flex;
+  align-items: center;
+
+  .search {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 5;
+
+    &:hover {
+      color: $primary;
+    }
+
+    > i {
+      font-size: 22px;
+    }
+  }
+
+  .inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-color: $primary;
+
+    .input {
+      width: 200px;
+      margin-right: -40px;
+      transition: width 0.3s ease;
+      border-radius: 100px;
+      border-color: $primary;
+
+      @media screen and (max-width: 768px) {
+        width: 150px;
+      }
+    }
+  }
+
+  .cart {
+    background-color: transparent !important;
+    margin-right: 18px;
+    font-size: 25px;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      margin-left: -5vw;
+      margin-right: -5vw;
+    }
+
+    > div {
+      background-color: $primary;
+      color: $text-secondary;
+      font-size: 14px;
+      margin-left: 5px;
+      position: absolute;
+      top: 2vh;
+    }
+  }
+
+  .user {
+    background-color: transparent !important;
+    font-size: 25px;
+
+    &:hover {
+      border: $primary;
+
+      i {
+        color: $text-primary;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 15vw;
+  }
+}
+
+// @import "~/src/scss/index.scss";
+
+// .account {
+//   display: flex;
+//   align-items: center;
+
+//   .search {
+//     background-color: transparent;
+//     border: none;
+//     margin-right: 10px;
+//     cursor: pointer;
+//     z-index: 5;
+
+//     &:hover {
+//       color: $primary;
+//     }
+
+//     > i {
+//       font-size: 22px;
+//     }
+//   }
+
+//   .inputContainer {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     height: 100%;
+//     border-color: $primary;
+
+//     .input {
+//       width: 200px;
+//       margin-right: -40px;
+//       transition: width 0.3s ease;
+//       border-radius: 100px;
+//       border-color: $primary;
+//     }
+//   }
+
+//   .cart {
+//     background-color: transparent !important;
+//     margin-left: -5vw;
+//     margin-right: -5vw;
+//     font-size: 25px;
+//     position: relative;
+
+//     > div {
+//       background-color: $primary;
+//       color: $text-secondary;
+//       font-size: 14px;
+//       margin-left: 5px;
+//       position: absolute;
+//       top: 2vh;
+//     }
+//   }
+
+//   .user {
+//     background-color: transparent !important;
+//     font-size: 25px;
+
+//     &:hover {
+//       border: $primary;
+
+//       i {
+//         color: $text-primary;
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 767px) {
+//     padding-left: 8vw; /* Agregar padding izquierdo en dispositivos móviles */
+//   }
+// }

@@ -1,0 +1,62 @@
+@import "~/src/scss/index.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  button {
+    background-color: $primary;
+    transition: background-color 0.3s ease;
+    color: white;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.inputWrapper:last-child {
+  margin-right: 0;
+}
+
+/* Estilos para los campos de entrada */
+.inputWrapper input {
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

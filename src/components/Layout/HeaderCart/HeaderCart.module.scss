@@ -1,0 +1,147 @@
+@import "~/src/scss/index.scss";
+
+.headerCart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px; /* Reducimos el padding para móvil */
+  z-index: 5;
+  background-color: $background-primary;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between; /* Alineamos los elementos en el header */
+    padding: 10px 20px; /* Ajustamos el padding para móvil */
+  }
+}
+
+.left {
+  width: 20%;
+
+  img {
+    height: 60px;
+    width: auto; /* Ajustamos el ancho automáticamente */
+    max-width: 100%; /* Aseguramos que no exceda el 100% del contenedor */
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 60%; /* Ajustamos el ancho del logo en móvil */
+  }
+}
+
+.center {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: none; /* Ocultamos los steps en móvil */
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    &.active {
+      > span {
+        color: $text-primary;
+      }
+      .number {
+        border-color: $primary;
+      }
+    }
+
+    &.success .number {
+      border-color: $primary;
+      background-color: $primary;
+      color: $primary;
+
+      i {
+        display: flex;
+        position: absolute;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.success .space {
+      background-color: $primary;
+    }
+
+    > span {
+      color: $text-primary;
+    }
+
+    .number {
+      border: 3px solid $border-primary;
+      font-size: 12px;
+      border-radius: 100px;
+      height: 26px;
+      width: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 1px;
+      padding-top: 1px;
+      margin-right: 10px;
+
+      i {
+        display: none;
+      }
+    }
+
+    .space {
+      width: 100px;
+      height: 3px;
+      background-color: $border-primary;
+      margin-left: 15px;
+      margin-right: 20px;
+    }
+
+    &:last-of-type .space {
+      display: none;
+    }
+  }
+}
+
+.right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  > i {
+    color: $success;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $border-primary;
+    padding-left: 10px;
+
+    > span {
+      &:first-of-type {
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      &:last-of-type {
+        color: $text-primary;
+        font-size: 11px;
+        margin-top: -4px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 60%; /* Ajustamos el ancho del bloque right en móvil */
+    padding-right: 10px; /* Añadimos espacio a la derecha en móvil */
+  }
+}

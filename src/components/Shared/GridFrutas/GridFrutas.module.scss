@@ -1,0 +1,167 @@
+@import "~/src/scss/index.scss";
+
+.gridFrutas {
+  margin-top: 20px;
+
+  .title {
+    width: 100%;
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    text-align: center;
+    color: $text-primary;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    i {
+      margin-right: 10px;
+      color: $primary;
+      animation: bounce 1.5s infinite;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 44px; /* Reduce el tamaño del texto */
+      margin-bottom: 40px; /* Ajusta el margen inferior */
+
+      i {
+        font-size: 40px; /* Reduce el tamaño del icono */
+        margin-right: 5px; /* Ajusta el margen derecho */
+      }
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    @media screen and (max-width: 767px) {
+      .fruta {
+        width: 50%; /* Muestra dos frutas por fila en móviles */
+      }
+    }
+  }
+
+  .fruta {
+    width: 33.33%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Asegura que todos los hijos estén en columna */
+    justify-content: space-between;
+
+    &.shuffle {
+      animation: shuffle 1.5s ease-in-out;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    > div {
+      margin-bottom: 10px;
+      position: relative;
+      padding: 10px 10px 0 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+
+      > span {
+        font-size: 18px;
+        font-weight: bold;
+
+        @media screen and (max-width: 767px) {
+          font-size: 14px; /* Reduce el tamaño del texto en móviles */
+        }
+      }
+
+      &:last-of-type {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      > img {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+
+      > img:hover {
+        transform: scale(1.05);
+      }
+
+      .discount {
+        position: absolute;
+        left: 10px;
+        bottom: 5px;
+      }
+
+      .infoContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+
+        @media screen and (max-width: 767px) {
+          flex-direction: column; /* Alinea verticalmente en móviles */
+          align-items: flex-start; /* Alinea a la izquierda en móviles */
+        }
+      }
+
+      .price {
+        font-size: 18px;
+        padding: 0;
+
+        @media screen and (max-width: 767px) {
+          font-size: 14px; /* Reduce el tamaño del precio en móviles */
+        }
+      }
+    }
+  }
+
+  .addToCartButton {
+    margin-top: auto; /* Empuja el botón hacia el final del contenedor */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shuffle {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-3deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
