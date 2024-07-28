@@ -1,10 +1,10 @@
 # Dockerfile
-FROM node:14
+FROM node:20
 
 WORKDIR /app
 
 COPY . .
 
-RUN npm install # o yarn install, dependiendo de tu gestor de paquetes
+RUN yarn install # o npm install, dependiendo de tu gestor de paquetes
 
-CMD ["npm", "start"] # o ["yarn", "start"] si usas yarn
+CMD ["yarn", "start"] # o ["npm", "start"] si usas npm
