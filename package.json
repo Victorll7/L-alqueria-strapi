@@ -1,12 +1,16 @@
 {
   "name": "eccomerce",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
   "scripts": {
+    "build": "strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -19,19 +23,14 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "5.3.4",
-    "strapi-plugin-email": "^3.6.11",
     "stripe": "^15.4.0",
     "styled-components": "5.3.3"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "be542b9b-2af0-4320-8f4d-894f66b23d39"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "be542b9b-2af0-4320-8f4d-894f66b23d39"
+  }
 }
