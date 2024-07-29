@@ -38,7 +38,6 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.5",
     "slick-carousel": "^1.8.1",
-    "strapi-plugin-email": "^3.6.11",
     "styled-components": "^6.1.11",
     "sweetalert2": "^11.12.3",
     "tailwind-merge": "^2.4.0",
