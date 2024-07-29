@@ -30,10 +30,11 @@
     padding: 10px 20px;
     color: #333;
     text-decoration: none;
+    word-spacing: 5px;
   }
 
   @media (max-width: 768px) {
-    width: 80%; /* Reducir el ancho en dispositivos móviles para dar espacio */
+    width: 70%; /* Reducir el ancho en dispositivos móviles para dar espacio */
   }
 }
 
@@ -50,7 +51,8 @@
 
   .categories {
     display: block; /* Muestra el menú en dispositivos móviles */
-    background-color: #fff;
+    backdrop-filter: blur(20px);
+    font-size: 17px;
   }
 }
 
