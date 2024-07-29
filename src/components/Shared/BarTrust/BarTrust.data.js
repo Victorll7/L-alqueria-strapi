@@ -10,11 +10,6 @@ export const data = [
     description: "En pedidos superiores a 50€",
   },
   {
-    icon: "check circle outline",
-    title: "100% Calidad Garantizada",
-    description: "Productos frescos",
-  },
-  {
     icon: "handshake outline",
     title: "Satisfacción del Cliente",
     description: "Garantía de satisfacción",

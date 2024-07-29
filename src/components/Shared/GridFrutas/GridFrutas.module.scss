@@ -41,6 +41,14 @@
     }
   }
 
+  .heart {
+    margin: 0 !important;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px !important;
+  }
+
   .grid {
     display: flex;
     flex-wrap: wrap;

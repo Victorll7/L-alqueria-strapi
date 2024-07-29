@@ -49,7 +49,7 @@
     border-right: 1px solid $border-primary;
     padding-right: 10px;
     margin-right: 10px;
-    font-size: 12px;
+    font-size: 16px;
 
     &:first-of-type {
       > img {
@@ -69,7 +69,7 @@
         align-items: center;
         color: $success;
         margin-right: 5px;
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -77,13 +77,14 @@
 
 .price {
   margin-bottom: 40px;
+  font-size: 28px;
 
   .originalPrice {
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: line-through;
 
     > i {
-      font-size: 12px;
+      font-size: 16px;
     }
   }
 
@@ -91,7 +92,7 @@
     margin: 0 10px;
     color: $primary;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .finalPrice {

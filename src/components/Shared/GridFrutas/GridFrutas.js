@@ -5,7 +5,7 @@ import { map } from "lodash";
 import { fn } from "@/utils";
 import { useCart } from "@/hooks";
 import { Label } from "@/components/Shared";
-import { Button, Icon } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 import styles from "./GridFrutas.module.scss";
 
 export function GridFrutas(props) {
@@ -65,50 +65,59 @@ export function GridFrutas(props) {
         </p>
       )}
       <div className={styles.grid}>
-        {map(frutas, (fruta, index) => (
-          <Link
-            key={fruta.id}
-            href={`/${fruta.attributes.slug}`}
-            className={`${styles.fruta} ${isVisible ? styles.shuffle : ""}`}
-            onClick={handleLinkClick} // Manejar clics en el Link
-          >
-            <div>
-              <img
-                src={`${enlaceurlServer}${fruta.attributes.cover?.data.attributes.url}`}
-                alt={fruta.attributes.title}
-              />
-              {fruta.attributes.discount > 0 && (
-                <Label.Discount className={styles.discount}>
-                  {`-${fruta.attributes.discount}%`}
-                </Label.Discount>
-              )}
-            </div>
-
-            <div className={styles.infoContainer}>
-              <span>{fruta.attributes.title}</span>
-              <span className={styles.price}>
-                {`${fn.calcDiscountedPrice(
-                  fruta.attributes.price,
-                  fruta.attributes.discount
-                )} €${
-                  fruta.attributes.unidad ? ` / ${fruta.attributes.unidad}` : ""
-                }`}
-              </span>
-            </div>
-
-            <div>
-              <Button
-                primary
-                fluid
-                onClick={() => addCartWrapper(fruta.id)}
-                loading={loading[fruta.id]}
-                className={styles.addToCartButton}
+        {map(frutas, (fruta, index) => {
+          // Verificar si la fruta está en temporada (Temporada === 'Sí')
+          if (fruta.attributes.Temporada === "Sí") {
+            return (
+              <Link
+                key={fruta.id}
+                href={`/${fruta.attributes.slug}`}
+                className={`${styles.fruta} ${isVisible ? styles.shuffle : ""}`}
+                onClick={handleLinkClick} // Manejar clics en el Link
               >
-                Añadir al carrito
-              </Button>
-            </div>
-          </Link>
-        ))}
+                <div>
+                  <img
+                    src={`${enlaceurlServer}${fruta.attributes.cover?.data.attributes.url}`}
+                    alt={fruta.attributes.title}
+                  />
+                  {fruta.attributes.discount > 0 && (
+                    <Label.Discount className={styles.discount}>
+                      {`-${fruta.attributes.discount}%`}
+                    </Label.Discount>
+                  )}
+                </div>
+
+                <div className={styles.infoContainer}>
+                  <span>{fruta.attributes.title}</span>
+                  <span className={styles.price}>
+                    {`${fn.calcDiscountedPrice(
+                      fruta.attributes.price,
+                      fruta.attributes.discount
+                    )} €${
+                      fruta.attributes.unidad
+                        ? ` / ${fruta.attributes.unidad}`
+                        : ""
+                    }`}
+                  </span>
+                </div>
+
+                <div>
+                  <Button
+                    primary
+                    fluid
+                    onClick={() => addCartWrapper(fruta.id)}
+                    loading={loading[fruta.id]}
+                    className={styles.addToCartButton}
+                  >
+                    Añadir al carrito
+                  </Button>
+                </div>
+              </Link>
+            );
+          } else {
+            return null; // No mostrar la fruta si no está en temporada
+          }
+        })}
       </div>
     </div>
   );

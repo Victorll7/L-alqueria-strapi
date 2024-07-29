@@ -2,12 +2,13 @@
 
 .container {
   position: relative;
+  width: 100%;
   height: 450px;
   margin-top: 15vh;
 
   @media screen and (min-width: 768px) {
     margin-top: 0vh;
-    height: 800px; /* Mayor altura para pantallas grandes */
+    height: 800px;
   }
 }
 
@@ -45,6 +46,11 @@
 
   h2 {
     margin: 5px 0 20px 0 !important;
+    font-size: 36px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   .price {
@@ -61,7 +67,10 @@
 
   .finalPriceNoDiscount {
     margin-left: 0;
-    font-size: 30px;
+    font-size: 35px;
     color: $text-primary;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 }

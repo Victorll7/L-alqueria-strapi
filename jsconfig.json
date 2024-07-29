@@ -1,17 +1,9 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     }
-=======
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "target": "ES2021",
-    "checkJs": true,
-    "allowJs": true
->>>>>>> ef67c752cccae529d1041c22566e07545f74909d
   }
 }

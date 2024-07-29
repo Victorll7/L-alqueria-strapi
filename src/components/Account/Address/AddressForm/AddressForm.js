@@ -1,5 +1,6 @@
 import { Form } from "semantic-ui-react";
 import { useFormik } from "formik";
+import Swal from "sweetalert2";
 import { Address } from "@/api";
 import { useAuth } from "@/hooks";
 import { initialValues, validationSchema } from "./AddressForm.form";
@@ -22,11 +23,30 @@ export function AddressForm(props) {
           await addressCtrl.create(formValue, user.id);
         }
 
-        formik.handleReset();
-        onReload();
-        onClose();
+        formik.resetForm(); // Resetear el formulario después de enviar
+        onReload(); // Recargar la lista de direcciones
+
+        // Mostrar SweetAlert de creación exitosa
+        Swal.fire({
+          icon: "success",
+          title: "¡Dirección creada!",
+          text: "La dirección se ha creado exitosamente.",
+          confirmButtonText: "Aceptar",
+          showConfirmButton: false,
+          timer: 1000,
+        }).then(() => {
+          onClose(); // Cerrar el modal después de aceptar el SweetAlert
+        });
       } catch (error) {
         console.error(error);
+
+        // Mostrar SweetAlert de error si es necesario
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Hubo un error al crear la dirección. Por favor, intenta nuevamente.",
+          confirmButtonText: "Aceptar",
+        });
       }
     },
   });

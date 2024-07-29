@@ -44,21 +44,20 @@
   }
 }
 
-/* Definir la animación con delay variable */
-@keyframes scroll-var {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(
-      calc(-100% - 30px)
-    ); /* Desplaza el contenido hacia la izquierda */
-  }
-}
-
 /* Media query para dispositivos móviles */
 @media screen and (max-width: 767px) {
   .content {
-    animation-duration: 5s; /* Reducir la duración de la animación en dispositivos móviles */
+    animation-duration: 7s; /* Reducir la duración de la animación en dispositivos móviles */
+  }
+  /* Definir la animación con delay variable */
+  @keyframes scroll-var {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(
+        calc(-200% - 280px)
+      ); /* Desplaza el contenido hacia la izquierda */
+    }
   }
 }
