@@ -10,13 +10,11 @@
   display: flex !important;
   align-items: center;
   padding: 20px 0; /* Reduce el padding para dispositivos móviles */
-  animation: scroll-var 15s linear infinite; /* Animación con delay variable por defecto */
   white-space: nowrap; /* Evita el salto de línea para que los elementos se desplacen en una línea continua */
 }
 
 .block {
   display: inline-flex;
-  display: flex;
   align-items: center;
   padding: 0 30px;
   border-right: 1px solid $border-primary;
@@ -44,10 +42,31 @@
   }
 }
 
-/* Media query para dispositivos móviles */
+/* Media query para dispositivos móviles y tablets */
+@media screen and (max-width: 1024px) {
+  .content {
+    animation: scroll-var 15s linear infinite; /* Animación con delay variable por defecto */
+    animation-duration: 15s; /* Ajustar la duración de la animación en tablets */
+  }
+
+  /* Definir la animación con delay variable */
+  @keyframes scroll-var {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(
+        calc(-200% - 280px)
+      ); /* Desplaza el contenido hacia la izquierda */
+    }
+  }
+}
+
+/* Media query específica para dispositivos móviles */
 @media screen and (max-width: 767px) {
   .content {
-    animation-duration: 7s; /* Reducir la duración de la animación en dispositivos móviles */
+    animation: scroll-var 15s linear infinite; /* Animación con delay variable por defecto */
+    animation-duration: 10s; /* Ajustar la duración de la animación en tablets */
   }
   /* Definir la animación con delay variable */
   @keyframes scroll-var {

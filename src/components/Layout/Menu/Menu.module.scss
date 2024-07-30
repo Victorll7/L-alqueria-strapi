@@ -33,31 +33,36 @@
     word-spacing: 5px;
   }
 
+  @media (max-width: 1024px) {
+    width: 70%; /* Reducir el ancho en tablets para dar espacio */
+  }
+
   @media (max-width: 768px) {
-    width: 70%; /* Reducir el ancho en dispositivos móviles para dar espacio */
+    width: 80%; /* Reducir aún más el ancho en dispositivos móviles */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menuToggle {
-    display: block; /* Muestra el icono de menú en dispositivos móviles */
+    display: block; /* Muestra el icono de menú en tablets */
     position: fixed;
     top: 20px;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
     font-size: 24px;
+    padding-top: 0.7vh;
   }
 
   .categories {
-    display: block; /* Muestra el menú en dispositivos móviles */
+    display: block; /* Muestra el menú en tablets */
     backdrop-filter: blur(20px);
     font-size: 17px;
   }
 }
 
-/* Mostrar el menú en pantallas más grandes (ejemplo: ancho mínimo de 768px) */
-@media (min-width: 769px) {
+/* Mostrar el menú en pantallas más grandes (ejemplo: ancho mínimo de 1025px) */
+@media (min-width: 1025px) {
   .menuToggle {
     display: none; /* Oculta el icono de menú en pantallas más grandes */
   }

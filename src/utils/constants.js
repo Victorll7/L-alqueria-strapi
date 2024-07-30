@@ -1,6 +1,6 @@
 export const ENV = {
-  SERVER_HOST: "https://alqueriatest-production.up.railway.app",
-  API_URL: "https://alqueriatest-production.up.railway.app/api",
+  SERVER_HOST: "alqueriatest-production.up.railway.app",
+  API_URL: "alqueriatest-production.up.railway.app/api",
   ENDPOINTS: {
     AUTH: {
       REGISTER: "auth/local/register",

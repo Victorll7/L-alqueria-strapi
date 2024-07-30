@@ -1,3 +1,5 @@
+@import "~/src/scss/index.scss";
+
 .topBar {
   position: fixed;
   display: flex;
@@ -12,6 +14,7 @@
     flex-wrap: wrap;
   }
 }
+
 .left {
   width: 25%; /* Ocupa todo el ancho en dispositivos móviles */
 
@@ -44,5 +47,39 @@
     width: 50%; /* Ocupa la mitad del ancho en dispositivos móviles */
     justify-content: flex-start; /* Alinear Account a la izquierda en móvil */
     margin-left: 10px; /* Ajustar margen izquierdo para separación */
+  }
+}
+
+/* Estilos adicionales para ajustar el topbar en tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .topBar {
+    padding: 10px; /* Ajustar el padding en tablets */
+  }
+
+  .left {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle; /* Alinea verticalmente con Account */
+    }
+  }
+  .right {
+    padding-right: 20vw; /* Ajustar el ancho del lado izquierdo en pantallas grandes */
+  }
+  .center {
+    padding-top: 5vh;
+  }
+}
+
+/* Estilos adicionales para ajustar el topbar en pantallas más grandes */
+@media screen and (min-width: 1025px) {
+  .topBar {
+    padding: 10px 20px; /* Restaurar el padding original en pantallas grandes si es necesario */
+  }
+
+  .left {
+    width: 25%; /* Ajustar el ancho del lado izquierdo en pantallas grandes */
   }
 }

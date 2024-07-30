@@ -16,6 +16,10 @@
     justify-content: space-between; /* Alineamos los elementos en el header */
     padding: 10px 20px; /* Ajustamos el padding para móvil */
   }
+  @media screen and (max-width: 1024px) {
+    justify-content: space-between; /* Alineamos los elementos en el header */
+    padding: 10px 20px; /* Ajustamos el padding para móvil */
+  }
 }
 
 .left {
@@ -30,6 +34,9 @@
   @media screen and (max-width: 768px) {
     width: 60%; /* Ajustamos el ancho del logo en móvil */
   }
+  @media screen and (max-width: 1024px) {
+    width: 60%; /* Ajustamos el ancho del logo en móvil */
+  }
 }
 
 .center {
@@ -38,6 +45,10 @@
   justify-content: center;
 
   @media screen and (max-width: 768px) {
+    display: none; /* Ocultamos los steps en móvil */
+  }
+
+  @media screen and (max-width: 1024px) {
     display: none; /* Ocultamos los steps en móvil */
   }
 
