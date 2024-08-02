@@ -24,12 +24,6 @@
       transform: translateY(0);
     }
 
-    i {
-      margin-right: 10px;
-      color: $primary;
-      animation: bounce 1.5s infinite;
-    }
-
     @media screen and (max-width: 767px) {
       font-size: 44px; /* Reduce el tamaño del texto */
       margin-bottom: 40px; /* Ajusta el margen inferior */
@@ -67,10 +61,6 @@
     display: flex;
     flex-direction: column; /* Asegura que todos los hijos estén en columna */
     justify-content: space-between;
-
-    &.shuffle {
-      animation: shuffle 1.5s ease-in-out;
-    }
 
     &:hover {
       opacity: 0.6;
@@ -155,34 +145,5 @@
 
   .addToCartButton {
     margin-top: auto; /* Empuja el botón hacia el final del contenedor */
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shuffle {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateX(-5px) rotate(3deg);
-  }
-  50% {
-    transform: translateY(-5px) rotate(-3deg);
-  }
-  75% {
-    transform: translateX(5px) rotate(3deg);
-  }
-  100% {
-    transform: translateY(0);
   }
 }

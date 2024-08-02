@@ -45,8 +45,8 @@
 @media (max-width: 1024px) {
   .menuToggle {
     display: block; /* Muestra el icono de menú en tablets */
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: -7.4vh;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
