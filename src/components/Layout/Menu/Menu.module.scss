@@ -42,11 +42,30 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .menuToggle {
     display: block; /* Muestra el icono de menú en tablets */
     position: absolute;
-    top: -7.4vh;
+    top: -4.6vh;
+    right: -60vw;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 28px;
+    padding-top: 0.7vh;
+  }
+
+  .categories {
+    display: block; /* Muestra el menú en tablets */
+    backdrop-filter: blur(20px);
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block; /* Muestra el icono de menú en tablets */
+    position: absolute;
+    top: -5.6vh;
     right: 20px;
     cursor: pointer;
     z-index: 1000;

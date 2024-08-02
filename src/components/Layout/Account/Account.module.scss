@@ -47,8 +47,8 @@
     position: relative;
 
     @media screen and (max-width: 768px) {
-      margin-left: -5vw;
-      margin-right: -5vw;
+      // margin-left: vw;
+      // margin-right: -5vw;
     }
 
     > div {
@@ -58,6 +58,10 @@
       margin-left: 5px;
       position: absolute;
       top: 2vh;
+
+      @media screen and (max-width: 768px) {
+        top: 3vh;
+      }
     }
   }
 
@@ -74,7 +78,7 @@
     }
   }
   @media screen and (max-width: 767px) {
-    padding-left: 15vw;
+    // padding-left: 10vw;
   }
 }
 
